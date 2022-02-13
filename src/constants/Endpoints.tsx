@@ -1,0 +1,1 @@
+export const baseUrl = 'https://us-central1-addressbook-api-329f0.cloudfunctions.net/contact';
