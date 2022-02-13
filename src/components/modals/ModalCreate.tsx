@@ -1,14 +1,11 @@
-import React, { useState, forwardRef } from 'react';
+import React, { useState } from 'react';
 import { Form, FormGroup, Label } from 'reactstrap';
 import { Button, Modal } from 'react-bootstrap';
 import axios from 'axios';
-import { Input } from 'reactstrap';
-// import '../../../App.css';
-import FormGroupComponent from './FormGroup';
+import { baseUrl } from '../../constants/Endpoints';
+import FormGroupComponent from '../contactsList/contactsForm/FormGroup';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
-
-import 'react-day-picker/lib/style.css';
 
 interface Fetch {
 	fetch: () => {};
@@ -43,10 +40,8 @@ const ModalCreate: React.FC<Fetch> = ({ fetch }) => {
 
 	const handleSubmit = async () => {
 		const data = newContact;
-		const requestUrl =
-			'https://us-central1-addressbook-api-329f0.cloudfunctions.net/contact';
 		await axios
-			.post(requestUrl, data)
+			.post(baseUrl, data)
 			.then(() => {
 				fetch();
 			})
@@ -152,14 +147,14 @@ const ModalCreate: React.FC<Fetch> = ({ fetch }) => {
 
 						<FormGroup>
 							<Label for='birth'>Date of birth</Label>
+
 							<DatePicker
 								selected={startDate}
 								onChange={(date: any) => setStartDate(date)}
+								peekNextMonth
+								showMonthDropdown
 								showYearDropdown
-								dateFormatCalendar='yyyy'
-								yearDropdownItemNumber={40}
-								scrollableYearDropdown
-								dateFormat='dd-MMM-yyyy'
+								dropdownMode='select'
 							/>
 						</FormGroup>
 					</Form>

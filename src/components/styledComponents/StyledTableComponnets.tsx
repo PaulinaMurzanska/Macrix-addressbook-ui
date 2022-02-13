@@ -8,7 +8,7 @@ export const StyledWrapper = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	margin-top: 50px;
-	border: 1px solid green;
+	
 `;
 export const StyledButtonsWrapper = styled.div`
 	width: 250px;

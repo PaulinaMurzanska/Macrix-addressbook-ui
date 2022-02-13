@@ -1,6 +1,6 @@
 import React, {useContext} from 'react'
 import { Button } from 'react-bootstrap';
-import {StyledButtonsWrapper} from "../atoms/StyledTableComponnets"
+import {StyledButtonsWrapper} from "./StyledTableComponnets"
 import { ContactCtx } from '../../context/ContactContex';
 
 interface Props {

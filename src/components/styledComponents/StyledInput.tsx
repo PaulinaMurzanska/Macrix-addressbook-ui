@@ -2,13 +2,14 @@ import styled from 'styled-components';
 
 
 
-
 export const StyledInput = styled.input`
 border:none;
 background-color: transparent;
 padding: 8px;
 margin-bottom: 8px;
 width:${({width})=>width?width:"auto"};
+color:black;
+
 
 &:hover{
 	background-color: #dee6ec;

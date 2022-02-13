@@ -35,7 +35,6 @@ const DeleteModal: React.FC<Props> = ({ id, fetch }) => {
 			.delete(deleteUrl, { params: itemToDelete })
 			.then((res) => {
 				console.log(
-					'response delete => show info about deletion!!!',
 					res,
 				);
 				fetch();

@@ -1,7 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { ThemeProvider } from 'styled-components';
-import {theme} from "../themes/AppTheme";
 import GlobalStyles from '../themes/GlobalStyles';
 
 const WrapperOuter = styled.div`
@@ -16,8 +14,8 @@ const MainTemplate:React.FC <Props> = ({children}) => {
 
   return (
     <WrapperOuter>
-        <GlobalStyles />
-        <ThemeProvider theme={theme}>{children}</ThemeProvider>
+      <GlobalStyles />
+      {children}
     </WrapperOuter>
  
   );

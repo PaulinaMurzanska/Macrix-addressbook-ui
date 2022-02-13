@@ -98,38 +98,36 @@ const ContactContext:React.FC = ({ children }) => {
     const [dateOfBirth, setDateOfBirth]=useState(contextValues.dateOfBirth);
     const [idToEdit, setIdToEdit]=useState(contextValues.idToEdit);
     const [rowActive, setRowActive]= useState(contextValues.rowActive)
-console.log("row active", rowActive);
 
-    console.log(contacts);
+    const value ={  
+        contacts,
+        setContacts,
+        firstName,
+        idToEdit,
+        lastName,
+        streetName,
+        houseNumber,
+        apartmentsNumber,
+        postalCode,
+        town,
+        phoneNumber,
+        dateOfBirth,
+        rowActive,
+        setFirstName,
+        setIdToEdit,
+        setLastName,
+        setStreetName,
+        setHouseNumber,
+        setApartmentsNumber,
+        setPostalCode,
+        setTown,
+        setPhoneNumber,
+        setDateOfBirth, 
+        setRowActive,
 
+    }
 	return (
-		<ContactCtx.Provider value={{
-            contacts,
-            setContacts,
-            firstName,
-            idToEdit,
-            lastName,
-            streetName,
-            houseNumber,
-            apartmentsNumber,
-            postalCode,
-            town,
-            phoneNumber,
-            dateOfBirth,
-            rowActive,
-            setFirstName,
-            setIdToEdit,
-            setLastName,
-            setStreetName,
-            setHouseNumber,
-            setApartmentsNumber,
-            setPostalCode,
-            setTown,
-            setPhoneNumber,
-            setDateOfBirth, 
-            setRowActive,
-            
-        }}>
+		<ContactCtx.Provider value={value}>
 			{children}
 		</ContactCtx.Provider>
 	);

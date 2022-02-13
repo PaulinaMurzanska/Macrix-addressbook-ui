@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
 export const StyledAppBodyContainer = styled.div`
-max-width: 1200px;
-width: 90vw;
+max-width: 1400px;
+width: 95vw;
 height: 100vh;
-margin: 5% auto;
-border: 2px solid red;
+margin: 50px auto;
 position:relative;
+
 
 `;
